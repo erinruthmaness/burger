@@ -1,0 +1,39 @@
+<body>
+    <div id="header">
+        <h1>Feed the Master!</h1>
+    </div>
+    <div id="main-game">
+        <div id="left-panel">
+            <h2>Conjure food for him here!</h2>
+            <form class="create-form">
+
+                <label for="food-name">Food:</label>
+                <input type="text" id="food-name" name="name">
+                <button type="submit">Place Order</button>
+            </form>
+
+            <h2>Incoming Food</h2>
+            <ul>
+                {{#each allBurgers}}
+                {{#unless eaten}}
+                {{> burgers/burger-block eaten=false}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div id="right-panel">
+            <img src="/master.gif">
+            <h2>He's Already Eaten:</h2>
+            <ul>
+                {{#each allBurgers}}
+                {{#if eaten}}
+                <li>{{name}}</li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <script src="/assets/burger.js"></script>
+
+</body>
