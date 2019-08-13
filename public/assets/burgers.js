@@ -1,12 +1,12 @@
 $(function () {
-    $("#feed-him").on("click", function (event) {
+    $(".feed-him").on("click", function (event) {
         var id = $(this).data("id");
-        var newMeal = $(this).data("newmeal");
+        var newMeal = true;
 
         var newMealCondition = {
             eaten: newMeal
         };
-
+        console.log(newMealCondition);
         // Send the PUT request.
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
@@ -23,7 +23,7 @@ $(function () {
     $(".create-form").on("submit", function(event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
-    
+      console.log("create form submitted");
         var newMeal = {
           name: $("#food-name").val().trim(),
           eaten: false
