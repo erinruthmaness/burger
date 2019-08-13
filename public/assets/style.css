@@ -1,24 +1,52 @@
 html {
     font-family: 'Anton', sans-serif;
+    background-color: rgb(236, 213, 183);
 }
 
 #header {
-    width: 100%;
+    width: 95%;
     padding: 10px;
-    margin: 10px;
+    margin-bottom: 10px;
     border: solid 2px tan;
+    background-color: white;
     text-align: center;
+    margin: 0 auto;
+}
+
+#main-game {
+    width: 95%;
+    margin: 0 auto;
 }
 
 #left-panel, #right-panel {
-    width: 40%;
+    width: 45%;
     padding: 10px;
+    margin: 10px;
     text-align: center;
     border: solid 2px tan;
+    background-color: white;
     float: left;
 }
 
 img {
     width: 95%;
+    border: solid 2px tan;
     margin: 0 auto;
+}
+
+@media only screen and (max-width: 700px) {
+    #header {
+        margin-bottom: 10px;
+    }
+
+    #main-game {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #left-panel, #right-panel {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
 }
